@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Work+Sans:wght@100&display=swap');
 *,
 *::before,
 *::after {
@@ -15,6 +16,8 @@ body,
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
+  background-image: url(./header.png);
+  font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
@@ -27,7 +30,7 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: hsl(0, 0%, 100%);
 }
 
 .card {
@@ -52,6 +55,7 @@ header {
 
 .card-body {
   min-height: 100px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card-footer {
@@ -74,7 +78,7 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: rgb(206, 132, 36);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
@@ -86,6 +90,7 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  font-family: 'Roboto', sans-serif;
 }
 
 button[disabled] {

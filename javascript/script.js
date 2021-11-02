@@ -15,3 +15,9 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+window.alert("Let's create a secure password!");
+window.prompt("How many characters will you need? (8-128 characters");
+
+
+
