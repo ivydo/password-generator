@@ -13,16 +13,35 @@ function generatePassword() {
 // Empty array
 
   var resultArray = [];
-  var userArray = [];
+  var passwordLength
   
-// Asks the user to confirm the conditions 
+// Asks the user to designate length and confirm/reject the conditions 
 
-  var passwordLength = prompt ("Choose a password length between 8-128 characters.");
-  var uppercase = confirm ("Click 'OK' to include uppercase letters. 'CANCEL' to exclude uppercase letters.");
-  var lowercase = confirm ("Click 'OK' to include lowercase letters. 'CANCEL' to exclude lowercase letters.");
-  var numbers = confirm ("Click 'OK' to include numbers. 'CANCEL' to exclude numbers.");
-  var special = confirm ("Click 'OK' to include special characters. 'CANCEL' to special characters.");
+  // var passwordLengthPrompt = prompt ("Choose a password length between 8-128 characters.");
+  // var uppercase = confirm ("Click 'OK' to include uppercase letters. 'CANCEL' to exclude uppercase letters.");
+  // var lowercase = confirm ("Click 'OK' to include lowercase letters. 'CANCEL' to exclude lowercase letters.");
+  // var numbers = confirm ("Click 'OK' to include numbers. 'CANCEL' to exclude numbers.");
+  // var special = confirm ("Click 'OK' to include special characters. 'CANCEL' to special characters.");
 
+  passwordLengthPrompt = prompt ("Choose a password length between 8-128 characters.");
+  if (parseInt(passwordLengthPrompt) > 7 && parseInt(passwordLengthPrompt) < 128) {
+    passwordLengthPrompt = parseInt(passwordLengthPrompt);
+    //Logs the password length
+    console.log("The password will have" + passwordLengthPrompt + " characters.");
+   } else {
+    alert("Count again... You MUST choose a length between 8-128 characters.");
+    generatePassword();
+  }
+  
+  uppercase = confirm ("Click 'OK' to include uppercase letters. 'CANCEL' to exclude uppercase letters.");
+  if (uppercase) {
+    resultArray = resultArray.concat(uppercaseArray);
+  }
+  
+  lowercase = confirm("Click 'OK' to include lowercase letters. 'CANCEL' to exclude lowercase letters.");
+  if (lowercase) {
+    resultArray = resultArray.concat(lowercaseArray);
+  }
 
   
 }
@@ -30,14 +49,14 @@ function generatePassword() {
 var generateBtn = document.querySelector("#generate");
 
 
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
+  passwordText.value = password;
 
-// }
+}
 
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
