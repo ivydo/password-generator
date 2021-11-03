@@ -72,7 +72,7 @@ userArray = [];
     console.log("this is special", resultArray);
   }
 
-
+// Puts all choices in array and randomizes
     for (i = 0; i < passwordLengthPrompt; i++) {
       userArray.push(resultArray[Math.floor(Math.random() * resultArray.length)]);
     }
@@ -94,5 +94,13 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+// Copy password to clipboard
+function copyPassword() {
+  var copyText = document.querySelector("password");
+}
+
+// Event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// Event listener to copy password to clip board
+generateBtn.addEventListener("click", copyPassword);
