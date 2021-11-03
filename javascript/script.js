@@ -1,8 +1,17 @@
-// Assignment code here
+// Push the button to begin
+var generateBtn = document.querySelector("#generate");
+
+
 
 // Get references to the #generate element
 
 function generatePassword() {
+// Empty array to hold all the choices
+
+var resultArray = [];
+userArray = [];
+  var passwordLength = 0;
+  
 
   // Array for each choice   
   var uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -10,11 +19,7 @@ function generatePassword() {
   var numbArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var specialArray = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
     
-  // Empty array to hold all the choices
-
-  var resultArray = [];
-  var passwordLength
-  
+   
   // Asks the user to designate length and confirm/reject the choices 
 
   // var passwordLengthPrompt = prompt ("Choose a password length between 8-128 characters.");
@@ -24,8 +29,14 @@ function generatePassword() {
   // var special = confirm ("Click 'OK' to include special characters. 'CANCEL' to special characters.");
 
   passwordLengthPrompt = prompt("Choose a password length between 8-128 characters.");
+  uppercase = confirm("Click 'OK' to include uppercase letters. 'CANCEL' to exclude uppercase letters.");
+  lowercase = confirm("Click 'OK' to include lowercase letters. 'CANCEL' to exclude lowercase letters.");
+  numbers = confirm("Click 'OK' to include numbers. 'CANCEL' to exclude numbers.");
+  special = confirm("Click 'OK' to include special characters. 'CANCEL' to special characters.");
+
+
   if (parseInt(passwordLengthPrompt) > 7 && parseInt(passwordLengthPrompt) < 128) {
-    passwordLengthPrompt = parseInt(passwordLengthPrompt);
+    passwordLength = parseInt(passwordLengthPrompt);
     // Logs the password length
     console.log("The password will have " + passwordLengthPrompt + " characters.");
   } else {
@@ -34,38 +45,49 @@ function generatePassword() {
   }
   
   // Asks the user if they want to include uppercase.
-  uppercase = confirm("Click 'OK' to include uppercase letters. 'CANCEL' to exclude uppercase letters.");
+  
   if (uppercase) {
     resultArray = resultArray.concat(uppercaseArray);
+    console.log("this is uppercase", resultArray);
   }
   
   // Asks the users if they want to include lowercase letters.
-  lowercase = confirm("Click 'OK' to include lowercase letters. 'CANCEL' to exclude lowercase letters.");
+  
   if (lowercase) {
     resultArray = resultArray.concat(lowercaseArray);
+    console.log("this is lowercase", resultArray);
   }
 
   // Asks the user if they want to include number.
-  numbers = confirm("Click 'OK' to include numbers. 'CANCEL' to exclude numbers.");
+  
   if (numbers) {
     resultArray = resultArray.concat(numbArray);
+    console.log("this is numbers", resultArray);
   }
 
 // Asks the user if they want to include special characters.
-special = confirm ("Click 'OK' to include special characters. 'CANCEL' to special characters.");
+
   if (special) {
-  resultArray = resultArray.concat(specialArray)
+    resultArray = resultArray.concat(specialArray)
+    console.log("this is special", resultArray);
   }
-  
+
+
+    for (i = 0; i < passwordLengthPrompt; i++) {
+      userArray.push(resultArray[Math.floor(Math.random() * resultArray.length)]);
+    }
+    console.log(userArray, "this is password");
+  return userArray.join("");
+    
 }
 
 
-var generateBtn = document.querySelector("#generate");
 
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
