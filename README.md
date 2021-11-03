@@ -5,10 +5,10 @@
 * CSS 
 * Javascript
 
-## Purpose
+# Purpose
 * Generates secure passwords using a combination of selectors based off user input.
 
-## Landing Page
+# Landing Page
 ![Landing Page](./assets/landing-page.png)
 
-## Website 
+# Website 
