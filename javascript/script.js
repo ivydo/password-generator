@@ -1,4 +1,15 @@
 // Assignment code here
+function generatePassword() {
+  // Designate password length
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var special = "!@#$%^&*()_+~`|}{[]\:;?><,./-=";
+  var numbers = "0123456789";
+    
+  var options = [alpha, caps, numeric, special];
+
+    window.prompt("Choose your password length (8 min., 128 max.):")
+}
 
 
 // Get references to the #generate element
@@ -16,8 +27,10 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-window.alert("Let's create a secure password!");
-window.prompt("How many characters will you need? (8-128 characters");
+
+
+
+
 
 
 
