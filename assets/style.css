@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Work+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300&family=Work+Sans:wght@100&display=swap');
 *,
 *::before,
 *::after {
@@ -31,6 +31,9 @@ header {
   padding: 20px;
   padding-top: 0px;
   color: hsl(0, 0%, 100%);
+  font-size: 36px;
+  font-family: 'Rubik', sans-serif;
+
 }
 
 .card {
@@ -91,6 +94,10 @@ header {
   text-align: center;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
+}
+
+.btn:hover {
+  opacity: .8;
 }
 
 button[disabled] {
