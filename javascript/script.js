@@ -8,14 +8,14 @@ function generatePassword() {
   var uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   var lowercaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var numbArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  var characterArray = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
+  var specialArray = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
     
   // Empty array to hold all the choices
 
   var resultArray = [];
   var passwordLength
   
-  // Asks the user to designate length and confirm/reject the conditions 
+  // Asks the user to designate length and confirm/reject the choices 
 
   // var passwordLengthPrompt = prompt ("Choose a password length between 8-128 characters.");
   // var uppercase = confirm ("Click 'OK' to include uppercase letters. 'CANCEL' to exclude uppercase letters.");
@@ -51,8 +51,12 @@ function generatePassword() {
     resultArray = resultArray.concat(numbArray);
   }
 
-
-
+// Asks the user if they want to include special characters.
+special = confirm ("Click 'OK' to include special characters. 'CANCEL' to special characters.");
+  if (special) {
+  resultArray = resultArray.concat(specialArray)
+  }
+  
 }
 
 
