@@ -9,6 +9,6 @@
 * Generates secure passwords using a combination of selectors based off user input.
 
 # Landing Page
-![Landing Page](./assets/landing-page.png)
+![Landing Page](./password-generator/assets/images/landing-page.png)
 
 # Website 

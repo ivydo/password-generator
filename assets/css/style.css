@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300&family=Work+Sans:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300&family=Work+Sans:wght@100&display=swap");
 *,
 *::before,
 *::after {
@@ -16,8 +16,8 @@ body,
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
-  background-image: url(./header.png);
-  font-family: 'Roboto', sans-serif;
+  background-image: url("/assets/images/header.png");
+  font-family: "Roboto", sans-serif;
 }
 
 .wrapper {
@@ -32,8 +32,7 @@ header {
   padding-top: 0px;
   color: hsl(0, 0%, 100%);
   font-size: 36px;
-  font-family: 'Rubik', sans-serif;
-
+  font-family: "Rubik", sans-serif;
 }
 
 .card {
@@ -56,9 +55,13 @@ header {
   height: 2px;
 }
 
+.card-header h2 {
+  text-align: center;
+}
+
 .card-body {
   min-height: 100px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .card-footer {
@@ -93,11 +96,11 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .btn:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 button[disabled] {
