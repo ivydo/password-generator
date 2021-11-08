@@ -1,14 +1,17 @@
-## Password Generator 
+## Password Generator
 
-# Made with 
-* HTML
-* CSS 
-* Javascript
+# Made with
+
+- HTML
+- CSS
+- Javascript
 
 # Purpose
-* Generates secure passwords using a combination of selectors based off user input.
+
+- Generates secure passwords using a combination of selectors based off user input.
 
 # Landing Page
-![Landing Page](./password-generator/assets/images/landing-page.png)
 
-# Website 
+![Landing Page](./assets/images/landing-page.png)
+
+# Website
